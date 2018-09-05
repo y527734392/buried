@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>公共字段 | Stat-埋点统计</title>
+    <meta name="description" content="Stat-埋点统计">
+    <link rel="shortcut icon" type="image/x-icon" href="https://img1.rrcimg.com/dist/pc/images/favicon-60ac45c9.ico">
+    
+    <link rel="preload" href="/buried-fe/assets/css/0.styles.a57fd8a9.css" as="style"><link rel="preload" href="/buried-fe/assets/js/app.08a63ed6.js" as="script"><link rel="preload" href="/buried-fe/assets/js/8.92a0b98e.js" as="script"><link rel="prefetch" href="/buried-fe/assets/js/2.61c5963e.js"><link rel="prefetch" href="/buried-fe/assets/js/3.a67cf640.js"><link rel="prefetch" href="/buried-fe/assets/js/4.807284dc.js"><link rel="prefetch" href="/buried-fe/assets/js/5.bcf19998.js"><link rel="prefetch" href="/buried-fe/assets/js/6.bfa5b519.js"><link rel="prefetch" href="/buried-fe/assets/js/7.5178bdb4.js"><link rel="prefetch" href="/buried-fe/assets/js/9.3628b55e.js"><link rel="prefetch" href="/buried-fe/assets/js/10.8ef3eb34.js"><link rel="prefetch" href="/buried-fe/assets/js/11.5f82386f.js"><link rel="prefetch" href="/buried-fe/assets/js/12.94532c09.js"><link rel="prefetch" href="/buried-fe/assets/js/13.186bd0c0.js"><link rel="prefetch" href="/buried-fe/assets/js/14.cdea0097.js"><link rel="prefetch" href="/buried-fe/assets/js/15.1c38d970.js"><link rel="prefetch" href="/buried-fe/assets/js/16.3f8d7774.js"><link rel="prefetch" href="/buried-fe/assets/js/17.6c675a9a.js">
+    <link rel="stylesheet" href="/buried-fe/assets/css/0.styles.a57fd8a9.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div><a href="/buried-fe/" class="home-link router-link-active"><!----><span class="site-name">
+      Stat-埋点统计
+    </span></a><div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""><!----></div><nav class="nav-links can-hide"><div class="nav-item"><a href="/buried-fe/" class="nav-link">指南</a></div><div class="nav-item"><a href="/buried-fe/guide/" class="nav-link">配置</a></div><div class="nav-item"><a href="/buried-fe/api.html" class="nav-link">API</a></div><!----></nav></div></header><div class="sidebar-mask"></div><div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/buried-fe/" class="nav-link">指南</a></div><div class="nav-item"><a href="/buried-fe/guide/" class="nav-link">配置</a></div><div class="nav-item"><a href="/buried-fe/api.html" class="nav-link">API</a></div><!----></nav><ul class="sidebar-links"><li><div class="sidebar-group first"><p class="sidebar-heading open"><span>指南</span><!----></p><ul class="sidebar-group-items"><li><a href="/buried-fe/" class="sidebar-link">介绍</a></li><li><a href="/buried-fe/getting_started.html" class="sidebar-link">起步</a></li><li><a href="/buried-fe/common_key.html" class="active sidebar-link">公共字段说明</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/buried-fe/common_key.html#介绍" class="sidebar-link">介绍</a></li><li class="sidebar-sub-header"><a href="/buried-fe/common_key.html#基础" class="sidebar-link">基础</a></li><li class="sidebar-sub-header"><a href="/buried-fe/common_key.html#非基础必要" class="sidebar-link">非基础必要</a></li></ul></li><li><a href="/buried-fe/pro_key.html" class="sidebar-link">业务通用字段说明</a></li><li><a href="/buried-fe/time_key.html" class="sidebar-link">时间字段说明</a></li></ul></div></li><li><div class="sidebar-group"><p class="sidebar-heading"><span>展示</span><!----></p><ul class="sidebar-group-items"><li><a href="/buried-fe/show/wst.html" class="sidebar-link">白屏时间</a></li><li><a href="/buried-fe/show/old.html" class="sidebar-link">加载时间</a></li><li><a href="/buried-fe/show/api.html" class="sidebar-link">接口请求时间</a></li></ul></div></li></ul></div><div class="page"><div class="content"><h1 id="公共字段"><a href="#公共字段" aria-hidden="true" class="header-anchor">#</a> 公共字段</h1><h2 id="介绍"><a href="#介绍" aria-hidden="true" class="header-anchor">#</a> 介绍</h2><p>公共字段定义是每次发送请求必带的一些数据，包含但不限pid、ref、ua、os、v；这些基础字段会统一维护在基础配置中，如非必要尽量不要修改。</p><h2 id="基础"><a href="#基础" aria-hidden="true" class="header-anchor">#</a> 基础</h2><h3 id="pid-800-900"><a href="#pid-800-900" aria-hidden="true" class="header-anchor">#</a> pid 800-900</h3><p>预留800； 以备后续其他系统接入</p><div class="language-html extra-class"><pre class="language-html"><code>801 财务审批系统 （旧版-8001 后期废弃）
+802 结算系统 （旧版-8002 后期废弃）
+803 服务商结算系统 （旧版-8003 后期废弃）
+804 资金管理系统
+805 收银台系统
+806 账户运营系统
+807 支付基础配置系统
+808 协议代扣系统
+809 合同中心系统
+</code></pre></div><h3 id="ref"><a href="#ref" aria-hidden="true" class="header-anchor">#</a> ref</h3><p>来源 系统名称</p><div class="language-html extra-class"><pre class="language-html"><code>rrcp-fiance         财务审批系统 （旧版 rrc-cw-fiance-old 后期废弃）
+rrcp-settle         结算系统 （旧版 rrc-cw-settle-old 后期废弃）
+rrcp-financing-mng  服务商结算系统 （旧版 rrcp-financing-mng-old  后期废弃）
+rrcp-settle         资金管理系统
+rrcp-paycenter      收银台系统
+rrcp-acm            账户运营系统
+rrcp-config         支付基础配置系统
+rrcp-dk             协议代扣系统
+rrcp-contract       合同中心系统
+</code></pre></div><h3 id="ua"><a href="#ua" aria-hidden="true" class="header-anchor">#</a> UA</h3><p>系统信息</p><div class="language-json extra-class"><pre class="language-json"><code>Mozilla/<span class="token number">5.0</span> (iPhone<span class="token punctuation">;</span> CPU iPhone OS <span class="token number">11</span>_3 like Mac OS X<span class="token punctuation">)</span> AppleWebKit/<span class="token number">605.1</span><span class="token number">.15</span> (KHTML<span class="token punctuation">,</span> like Gecko<span class="token punctuation">)</span> Version/<span class="token number">11.0</span> Mobile/<span class="token number">15E148</span> Safari/<span class="token number">604.1</span> 
+</code></pre></div><h3 id="os"><a href="#os" aria-hidden="true" class="header-anchor">#</a> os</h3><p>运行平台</p><div class="language-json extra-class"><pre class="language-json"><code>    <span class="token property">&quot;os&quot;</span><span class="token operator">:</span> <span class="token string">&quot;IOS&quot;</span><span class="token punctuation">,</span> // 苹果
+    <span class="token property">&quot;os&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Andiord&quot;</span><span class="token punctuation">,</span> // 安卓
+    <span class="token property">&quot;os&quot;</span><span class="token operator">:</span> <span class="token string">&quot;IE&quot;</span><span class="token punctuation">,</span> // ie 浏览器
+    <span class="token property">&quot;os&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Chrome&quot;</span><span class="token punctuation">,</span> // 谷歌 浏览器
+    <span class="token property">&quot;os&quot;</span><span class="token operator">:</span> <span class="token string">&quot;firefox&quot;</span><span class="token punctuation">,</span> // 火狐 浏览器
+    <span class="token property">&quot;os&quot;</span><span class="token operator">:</span> <span class="token string">&quot;QQ&quot;</span><span class="token punctuation">,</span> // qq 浏览器
+    <span class="token property">&quot;os&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2345&quot;</span><span class="token punctuation">,</span> // <span class="token number">2345</span> 浏览器
+    <span class="token property">&quot;os&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Sougo&quot;</span><span class="token punctuation">,</span> // 搜狗 浏览器
+    <span class="token property">&quot;os&quot;</span><span class="token operator">:</span> <span class="token string">&quot;other&quot;</span><span class="token punctuation">,</span> // 其他 浏览器
+</code></pre></div><h3 id="v"><a href="#v" aria-hidden="true" class="header-anchor">#</a> v</h3><p>当前业务版本号，获取为package中的version</p><div class="language-json extra-class"><pre class="language-json"><code>    <span class="token property">&quot;v&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;v1.0.0&quot;</span>
+</code></pre></div><h2 id="非基础必要"><a href="#非基础必要" aria-hidden="true" class="header-anchor">#</a> 非基础必要</h2><h3 id="uid"><a href="#uid" aria-hidden="true" class="header-anchor">#</a> uid</h3><p>获取登录用户id，记录用户唯一性，后期过滤，即可获得该用户的一些行为习惯</p><blockquote><p>改字段，需要加密， charCode 平移1个单位，获取数据 偏移回来即可。</p></blockquote><div class="language-json extra-class"><pre class="language-json"><code>    <span class="token property">&quot;uid&quot;</span><span class="token operator">:</span> <span class="token string">&quot;12678&quot;</span>
+</code></pre></div><h3 id="uname"><a href="#uname" aria-hidden="true" class="header-anchor">#</a> uname</h3><p>获取登录用户真是姓名</p><blockquote><p>改字段，需要加密， charCode 平移1个单位，获取数据 偏移回来即可。</p></blockquote><div class="language-json extra-class"><pre class="language-json"><code>    <span class="token property">&quot;uname&quot;</span><span class="token operator">:</span> <span class="token string">&quot;张三&quot;</span>
+</code></pre></div><h3 id="type"><a href="#type" aria-hidden="true" class="header-anchor">#</a> type</h3><p>统计的类型</p><div class="language-json extra-class"><pre class="language-json"><code>    <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;FEPageTime&quot;</span><span class="token punctuation">,</span> // 前端 页面加载时间
+</code></pre></div><h3 id="page"><a href="#page" aria-hidden="true" class="header-anchor">#</a> page</h3><p>页面名称</p><div class="language-json extra-class"><pre class="language-json"><code>    <span class="token property">&quot;page&quot;</span><span class="token operator">:</span> <span class="token string">&quot;list&quot;</span>  // 前端页面 路由name
+</code></pre></div><h3 id="page-url"><a href="#page-url" aria-hidden="true" class="header-anchor">#</a> page_url</h3><div class="language-json extra-class"><pre class="language-json"><code>    <span class="token property">&quot;page_url&quot;</span><span class="token operator">:</span> <span class="token string">&quot;http://rrc.com/list&quot;</span> // 前端页面 详细链接
+</code></pre></div></div><div class="page-edit"><!----><!----></div><div class="page-nav"><p class="inner"><span class="prev">
+        ← <a href="/buried-fe/getting_started.html" class="prev">
+          起步
+        </a></span><span class="next"><a href="/buried-fe/pro_key.html">
+          业务通用字段说明
+        </a> →
+      </span></p></div></div></div></div>
+    <script src="/buried-fe/assets/js/8.92a0b98e.js" defer></script><script src="/buried-fe/assets/js/app.08a63ed6.js" defer></script>
+  </body>
+</html>
